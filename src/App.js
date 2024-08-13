@@ -7,8 +7,12 @@ const UserForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    // Şu anki tarih ve saati al
+    const timestamp = new Date().toISOString();
+
     // Form verilerini JSON formatında oluştur
     const formData = {
+      timestamp, // Zaman damgasını ekle
       name: {
         type: "text",
         value: name,
